@@ -17,10 +17,12 @@ type Mutation {
 
 input TestInput {
 	id: ID
-  nested: NestedTestInput!
+  # nested: NestedTestInput!
 }
 
-type NestedTestInput {
-  id: ID
-  name: String!
-}
+# First deploy without this input type to actually create the Stack
+# Then uncomment this type and the field `nested` and deploy again to test the bug 
+# type NestedTestInput {
+#   id: ID
+#   name: String!
+# }
